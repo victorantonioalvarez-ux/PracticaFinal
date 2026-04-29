@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<header>
+		<h1>Crear Nueva Tarea</h1>
+	</header>
+	<main>
+		<form id="submit" class="crear-tarea">
+            <label for="titulo-tarea">Titulo</label>
+            <input id="nueva-categ" name="nueva-categ" required>
+            <label for="descripcion">Descripcion: </label>
+            <textarea id="descripcion" name="descripcion" rows="4" cols="50" placeholder="Escribe aquí..." required></textarea>
+            <label for="fecha">Fecha: </label>
+            <input type="date">
+            <label for="select-categoria">Categoria:</label>
+            <select id="select-categoria" name="select-categoria">
+                <option value="#">#</option>
+            </select>
+            <label for="select-prioridad">Prioridad:</label>
+            <select id="select-prioridad" name="select-prioridad">
+                <option value="Baja">Baja</option>
+                <option value="Media">Media</option>
+                <option value="Alta">Alta</option>
+            </select>
+            <button type="submit">Crear Tarea</button>
+		</form>
+			
+		</div>
+	</main>
+	<aside>
+		<h3>Menú</h3>
+		<div>
+			<a src="#">Lista de actividades</a>
+			<a src="#">Crear tarea</a>
+			<a src="#">Gestion de categorias</a>
+		</div>
+	</aside>
+</body>
+</html>
