@@ -10,7 +10,7 @@
 		<h1>Crear Nueva Tarea</h1>
 	</header>
 	<main>
-		<form id="submit" class="crear-tarea">
+		<form id="form-tareas" class="crear-tarea">
             <label for="titulo-tarea">Titulo</label>
             <input id="nueva-categ" name="nueva-categ" required>
             <label for="descripcion">Descripcion: </label>
