@@ -35,9 +35,9 @@
 	<aside>
 		<h3>Menú</h3>
 		<div>
-			<a src="#">Lista de actividades</a>
-			<a src="#">Crear tarea</a>
-			<a src="#">Gestion de categorias</a>
+			<a src="./index.html">Lista de actividades</a>
+			<a src="./creaciontareanueva.html">Crear tarea</a>
+			<a src="./gestioncategoria.html">Gestion de categorias</a>
 		</div>
 	</aside>
 </body>
