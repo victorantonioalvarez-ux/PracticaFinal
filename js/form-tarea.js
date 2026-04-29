@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded",function(){
     category.addEventListener("submit", function(event){
         event.preventDefault();
 
-        const  = getElementById("nueva-categ");
-        const color = getElementById("color-categ");
-        const color = getElementById("color-categ");
-        const color = getElementById("color-categ");
+        const titulo = getElementById("titulo-tarea");
+        const descripcion = getElementById("descripcion");
+        const fecha = getElementById("fecha-tarea");
+        const categoria = getElementById("select-categoria");
+        const prioridad = getElementById("select-prioridad");
     });
 });
