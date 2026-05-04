@@ -24,4 +24,9 @@ aside nav a:hover{
 	color: #bfbfbf;
 }
 
+main{
+	background: #e5e7eb; /* gris */
+	padding: 20px;
+}
+
 
