@@ -29,4 +29,18 @@ main{
 	padding: 20px;
 }
 
+.añadir-tareas{
+	background: white;
+	padding: 15px;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
 
+.añadir-tareas input,
+.añadir-tareas button{
+	padding: 8px;
+}
