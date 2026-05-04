@@ -6,41 +6,46 @@ body{
 	font-family: Arial, sans-serif;
 }
 
-aside{
+.barra-lateral{
 	background: #1e4ed8;
 	padding: 20px;
-	height: 100vh;
 }
 
-aside nav a{
+.menu a{
 	display: block;
 	color: white;
 	text-decoration: none;
 	margin: 10px 0;
-	transition: color 0.2s ease;
+	transition: color 0.2s;
 }
 
-aside nav a:hover{
+.menu a:hover{
 	color: #bfbfbf;
 }
 
-main{
-	background: #e5e7eb; /* gris */
+.contenido{
+	background: #e5e7eb;
 	padding: 20px;
 }
 
-.añadir-tareas{
+.titulo-principal{
+	margin-top: 0;
+}
+
+.formulario{
 	background: white;
 	padding: 15px;
 	border-radius: 8px;
 	box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-	margin-bottom: 20px;
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	margin-bottom: 20px;
 }
 
-.añadir-tareas input,
-.añadir-tareas button{
+.formulario input,
+.formulario select,
+.formulario textarea,
+.formulario button{
 	padding: 8px;
 }
