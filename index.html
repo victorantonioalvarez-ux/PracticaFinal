@@ -7,30 +7,32 @@
 	<title></title>
 </head>
 <body>
-	<aside>
-		<h3>Menú</h3>
-		<nav>
+	<aside class="barra-lateral">
+		<h3 class="titulo-menu">Menú</h3>
+		<nav class="menu">
 			<a href="./index.html">Lista de actividades</a>
 			<a href="./creaciontareanueva.html">Crear tarea</a>
 			<a href="./gestioncategoria.html">Gestion de categorias</a>
 		</nav>
 	</aside>
-	<main>
-		<h1>Lista de actividades</h1>
-		<form id="form-tareas" class="añadir-tareas">
-			<button id="">Crear tarea nueva</button>
-            <label for="archivojson">Sube tus tareas</label>
-            <input id="archivojson" name="archivoJson" placeholder="archivo.json" required>
-            <button type="submit">Subir</button>
+
+	<main class="contenido">
+		<h1 class="titulo-principal">Lista de actividades</h1>
+
+		<form class="formulario">
+			<button type="button">Crear tarea nueva</button>
+			<label for="archivojson">Sube tus tareas</label>
+			<input id="archivojson" name="archivoJson" placeholder="archivo.json" required>
+			<button type="submit">Subir</button>
 		</form>
+
 		<h2>Tareas pendientes</h2>
-		<div class="tareas pendientes">
+		<div class="lista-tareas">
 			
 		</div>
+
 		<h2>Tareas acabadas</h2>
-		<div class="tareas pendientes">
-			
-		</div>
+		<div class="lista-tareas"></div>
 	</main>
 </body>
 </html>

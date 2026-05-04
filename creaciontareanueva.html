@@ -7,37 +7,40 @@
 	<title></title>
 </head>
 <body>
-	<aside>
-		<h3>Menú</h3>
-		<nav>
+	<aside class="barra-lateral">
+		<h3 class="titulo-menu">Menú</h3>
+		<nav class="menu">
 			<a href="./index.html">Lista de actividades</a>
 			<a href="./creaciontareanueva.html">Crear tarea</a>
 			<a href="./gestioncategoria.html">Gestion de categorias</a>
 		</nav>
 	</aside>
-	<main>
-		<h1>Crear Nueva Tarea</h1>
-		<form id="form-tareas" class="crear-tarea">
-            <label for="titulo-tarea">Titulo</label>
-            <input id="nueva-categ" name="nueva-categ" required>
-            <label for="descripcion">Descripcion: </label>
-            <textarea id="descripcion" name="descripcion" rows="4" cols="50" placeholder="Escribe aquí..." required></textarea>
-            <label for="fecha">Fecha: </label>
-            <input type="date">
-            <label for="select-categoria">Categoria:</label>
-            <select id="select-categoria" name="select-categoria">
-                <option value="#">#</option>
-            </select>
-            <label for="select-prioridad">Prioridad:</label>
-            <select id="select-prioridad" name="select-prioridad">
-                <option value="Baja">Baja</option>
-                <option value="Media">Media</option>
-                <option value="Alta">Alta</option>
-            </select>
-            <button type="submit">Crear Tarea</button>
-		</form>
+
+	<main class="contenido">
+		<h1 class="titulo-principal">Crear nueva tarea</h1>
+
+		<form class="formulario">
+			<label for="titulo-tarea">Título</label>
+			<input id="titulo-tarea" name="titulo-tarea" required>
+			<label for="descripcion">Descripción</label>
+			<textarea id="descripcion" name="descripcion" rows="4" placeholder="Escribe aquí..." required></textarea>
+			<label for="fecha">Fecha</label>
+			<input id="fecha" type="date">
 			
-		</div>
+			<label for="categoria">Categoría</label>
+			<select id="categoria">
+				<option value="">Selecciona</option>
+			</select>
+
+			<label for="prioridad">Prioridad</label>
+			<select id="prioridad">
+				<option>Baja</option>
+				<option>Media</option>
+				<option>Alta</option>
+			</select>
+
+			<button type="submit">Crear tarea</button>
+		</form>
 	</main>
 </body>
 </html>
