@@ -5,3 +5,23 @@ body{
 	grid-template-columns: 25% 75%;
 	font-family: Arial, sans-serif;
 }
+
+aside{
+	background: #1e4ed8;
+	padding: 20px;
+	height: 100vh;
+}
+
+aside nav a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	margin: 10px 0;
+	transition: color 0.2s ease;
+}
+
+aside nav a:hover{
+	color: #bfbfbf;
+}
+
+
