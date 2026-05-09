@@ -1,7 +1,7 @@
 const CLAVE_CATEGORIAS = "categorias";
 
 function obtenerCategorias() {
-    const datos = localStorage.getItem(clave_categorias);
+    const datos = localStorage.getItem(CLAVE_CATEGORIAS);
     if (datos) {
         return JSON.parse(datos);
     } else {
