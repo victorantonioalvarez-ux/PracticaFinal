@@ -8,3 +8,8 @@ function obtenerCategorias() {
         return [];
     }
 }
+
+function guardarCategoria(categorias) {
+    localStorage.setItem(clave_categorias, JSON.stringify(categorias));
+}
+
