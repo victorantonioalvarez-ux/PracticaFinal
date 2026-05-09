@@ -24,3 +24,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function mostrarCategorias(){
+    const lista = document.getElementById("lista-categorias");
+    const categorias = obtenerCategorias();
+
+    lista.innerHTML = "";
+
+    if (categorias.length === 0) {
+        lista.innerHTML = "<p>No hay categorias creadas todavia.</p>";
+        return;
+    }
+
+    categorias.forEach(function(c){
+        const div = document.createElement("div");
+        div.classList.add("tarjeta-categoria");
+
+        div.innerHTML =
+            `<div class="cat-info">
+                <span class="cat-color" style="background-color: ${c.color}"></span>
+                <span class="cat-nombre">${c.nombre}</span>
+            </div>
+            <button class="btn-eliminar" onclick="borrarCategoria(${c.id})">🗑 Eliminar</button>`;
+        
+        lista.appendChild(div);
+    });
+}
