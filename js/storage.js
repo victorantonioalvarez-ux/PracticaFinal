@@ -19,3 +19,10 @@ function agregarCategoria(categoria){
     guardarCategoria(categorias);
 }
 
+function borrarCategoria(id) {
+    const categorias = obtenerCategorias().filter(function(c){
+        return c.id !== id;
+    });
+    guardarCategoria(categorias);
+    mostrarCategorias();
+}
