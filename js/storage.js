@@ -1,4 +1,4 @@
-const clave_categorias = "categorias";
+const CLAVE_CATEGORIAS = "categorias";
 
 function obtenerCategorias() {
     const datos = localStorage.getItem(clave_categorias);
@@ -10,6 +10,12 @@ function obtenerCategorias() {
 }
 
 function guardarCategoria(categorias) {
-    localStorage.setItem(clave_categorias, JSON.stringify(categorias));
+    localStorage.setItem(CLAVE_CATEGORIAS, JSON.stringify(categorias));
+}
+
+function agregarCategoria(categoria){
+    const categorias= obtenerCategorias();
+    categorias.push(categoria);
+    guardarCategoria(categorias);
 }
 
