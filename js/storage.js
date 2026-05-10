@@ -58,3 +58,13 @@ function agregarTarea(tarea) {
     tareas.push(tarea);
     guardarTareas(tareas);
 }
+
+function marcarTareaTerminada(id) {
+    const tareas = obtenerTareas().map(function(t) {
+        if(t.id === id) {
+            t.realizada = !t.realizada;
+        }
+        return t;
+        guardarTareas();
+    });
+}
