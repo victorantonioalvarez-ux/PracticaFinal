@@ -35,6 +35,35 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 });
 
+function importarTareas(tareasNuevas) {
+    const tareasExistentes = obtenerTareas();
+    const idsExistentes = tareasExistentes.map(function(t) {
+        return t.id;
+    });
+
+    tareasNuevas.forEach(function(tarea){
+        if (!idsExistentes.includes(tarea.id)){
+            let categoria = tarea.categoria;
+            if(typeof categoria === "objeto" && categoria !== null) {
+                categoria = categoria.nom;
+
+            }
+
+            const tareaAdaptada = {
+                id: tarea.id,
+                titulo: tarea.titulo || tarea.titol || "",
+                descripcion: tarea.descripcion || tarea.descripcio || "",
+                fecha: tarea.fecha || tarea.data || "",
+                categoria: categoria || "",
+                prioridad: tarea.prioridad || tarea.prioritat || "",
+                terminada: tarea.terminada || tarea.realitzada || false
+            };
+
+            agregarTarea(tareaAdaptada)
+        }
+    });
+}
+
 function mostrarTareas(){
     const tareas = obtenerTareas();
 
@@ -47,7 +76,7 @@ function mostrarTareas(){
     });
 
     const listaPendientes = docuemnt.querySelectorAll(".lista-tareas")[0];
-    const listaTerminadas = docuemnt.querySelectorAll(".lista-tareas")[0];
+    const listaTerminadas = docuemnt.querySelectorAll(".lista-tareas")[1];
 
     listaPendientes.innerHTML = "";
     listaTerminadas.innerHTML = "";
