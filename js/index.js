@@ -44,7 +44,7 @@ function importarTareas(tareasNuevas) {
     tareasNuevas.forEach(function(tarea){
         if (!idsExistentes.includes(tarea.id)){
             let categoria = tarea.categoria;
-            if(typeof categoria === "objeto" && categoria !== null) {
+            if(typeof categoria === "object" && categoria !== null) {
                 categoria = categoria.nom;
 
             }
@@ -75,8 +75,8 @@ function mostrarTareas(){
         return t.terminada === true;
     });
 
-    const listaPendientes = docuemnt.querySelectorAll(".lista-tareas")[0];
-    const listaTerminadas = docuemnt.querySelectorAll(".lista-tareas")[1];
+    const listaPendientes = document.querySelectorAll(".lista-tareas")[0];
+    const listaTerminadas = document.querySelectorAll(".lista-tareas")[1];
 
     listaPendientes.innerHTML = "";
     listaTerminadas.innerHTML = "";
