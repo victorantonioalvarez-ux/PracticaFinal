@@ -60,3 +60,8 @@ function crearTarjetaTarea(tarea) {
         </div>`;
     return div;
 }
+
+function toggleTerminada(id) {
+    marcarTareaTerminada(id);
+    mostrarTareas();
+}
