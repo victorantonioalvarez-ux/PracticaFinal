@@ -19,7 +19,7 @@ function crearTarea(titulo, descripcion, fecha, categoria, prioridad) {
 
 function crearCategoria(nombre, color){
     return {
-        id: Date.now(),
+        id: Date.now() + Math.floor(Math.random() * 1000),
         nombre: nombre,
         color: color
     };
