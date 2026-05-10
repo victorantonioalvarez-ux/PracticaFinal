@@ -65,3 +65,11 @@ function toggleTerminada(id) {
     marcarTareaTerminada(id);
     mostrarTareas();
 }
+
+function eliminarTareas(id) {
+    if (confirm("¿Seguro que quieres eliminar esta tarea?")){
+        eliminarTareas(id)
+        mostrarTareas();
+    }
+    
+}
