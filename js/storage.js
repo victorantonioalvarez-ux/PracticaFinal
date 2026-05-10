@@ -46,3 +46,9 @@ function guardarTareas(tareas) {
     localStorage.setItem(CLAVE_TAREAS, JSON.stringify(tareas));
 }
 
+function eliminarTarea(id) {
+    const tareas = obtenerTareas().filter(function(t){
+        return t.id !== id;
+    });
+    guardarTareas(tareas);
+}
