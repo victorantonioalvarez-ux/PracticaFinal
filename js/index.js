@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const btnCrear = document.querySelector("#form-index button[type='button']");
     btnCrear.addEventListener("click", function(){
-        window.location.href = "./creaciontareanueva.html"
+        window.location.href = "./creaciontareanueva.html";
     });
 
     const formIndex = document.getElementById("form-index")
