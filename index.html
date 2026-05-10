@@ -19,7 +19,7 @@
 	<main class="contenido">
 		<h1 class="titulo-principal">Lista de actividades</h1>
 
-		<form class="formulario">
+		<form class="formulario" id="form-index">
 			<button type="button">Crear tarea nueva</button>
 			<label for="archivojson">Sube tus tareas</label>
 			<input id="archivojson" name="archivoJson" placeholder="archivo.json" required>
@@ -34,5 +34,9 @@
 		<h2>Tareas acabadas</h2>
 		<div class="lista-tareas"></div>
 	</main>
+
+	<script src="./js/index.js"></script>
+	<script src="./js/modelos.js"></script>
+	<script src="./js/storage.js"></script>
 </body>
 </html>

@@ -19,13 +19,21 @@
 	<main class="contenido">
 		<h1 class="titulo-principal">Gestión de Categorías</h1>
 
-		<form class="formulario">
+		<form class="formulario" id="form-categorias">
 			<label for="nueva-categoria">Nueva categoría</label>
 			<input id="nueva-categoria" name="nueva-categoria" required>
 			<label for="color-categoria">Color de la categoría</label>
 			<input id="color-categoria" name="color-categoria" type="color">
 			<button type="submit">Agregar categoría</button>
 		</form>
+
+		<div id="lista-categorias" class="lista-categorias">
+			
+		</div>
 	</main>
+
+	<script src="./js/categorias.js"></script>
+	<script src="./js/modelos.js"></script>
+	<script src="./js/storage.js"></script>
 </body>
 </html>
