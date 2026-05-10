@@ -52,8 +52,14 @@ function importarTareas(tareasNuevas) {
         if (!idsExistentes.includes(tarea.id)){
             let categoria = tarea.categoria;
             if(typeof categoria === "object" && categoria !== null) {
+                const categoriaExistente = obtenerCategorias().find(function(c) {
+                    return c.nombre === categoria.nom;
+                });
+                if (!categoriaExistente) {
+                    const nuevaCategoria = crearCategoria(categoria.nom, categoria.color);
+                    agregarCategoria(nuevaCategoria);
+                }
                 categoria = categoria.nom;
-
             }
 
             const tareaAdaptada = {
