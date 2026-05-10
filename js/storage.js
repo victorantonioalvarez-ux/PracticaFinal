@@ -66,5 +66,5 @@ function marcarTareaTerminada(id) {
         }
         return t;
     });
-    guardarTareas();
+    guardarTareas(tareas);
 }
