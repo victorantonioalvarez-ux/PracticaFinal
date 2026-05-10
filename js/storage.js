@@ -62,7 +62,7 @@ function agregarTarea(tarea) {
 function marcarTareaTerminada(id) {
     const tareas = obtenerTareas().map(function(t) {
         if(t.id === id) {
-            t.realizada = !t.realizada;
+            t.terminada = !t.terminada;
         }
         return t;
     });
