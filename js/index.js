@@ -84,8 +84,8 @@ function mostrarTareas(){
     if (pendientes.length === 0) {
         listaPendientes.innerHTML = "<p>No hay tareas pendientes.</p>";
     } else {
-        pendientes.array.forEach(function(tareas) {
-            listaPendientes.appendChild(crearTarjetaTarea(tareas));
+        pendientes.forEach(function(tarea) {
+            listaPendientes.appendChild(crearTarjetaTarea(tarea));
         });
     }
 
@@ -132,10 +132,9 @@ function toggleTerminada(id) {
     mostrarTareas();
 }
 
-function eliminarTareasYActualizar(id) {
+function eliminarTareaYActualizar(id) {
     if (confirm("¿Seguro que quieres eliminar esta tarea?")){
-        eliminarTareas(id)
+        eliminarTarea(id);
         mostrarTareas();
     }
-    
 }
