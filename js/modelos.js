@@ -1,9 +1,7 @@
-function crearCategoria(nombre, color){
-    return {
-        id: Date.now(),
-        nombre: nombre,
-        color: color
-    };
+function generarIdTarea() {
+    const tareas = obtenerTareas();
+    const numero = tareas.length + 1;
+    return "task-" + String(numero).padStart(3,"0");
 }
 
 function crearTarea(titulo, descripcion, fecha, categoria, prioridad) {
@@ -18,8 +16,11 @@ function crearTarea(titulo, descripcion, fecha, categoria, prioridad) {
     };
 }
 
-function generarIdTarea() {
-    const tareas = obtenerTareas();
-    const numero = tareas.length + 1;
-    return "task-" + String(numero).padStart(3,"0");
+
+function crearCategoria(nombre, color){
+    return {
+        id: Date.now(),
+        nombre: nombre,
+        color: color
+    };
 }
