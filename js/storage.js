@@ -24,7 +24,7 @@ function agregarCategoria(categoria){
 
 function borrarCategoria(id) {
     const categorias = obtenerCategorias().filter(function(c){
-        return c.id !== id;
+        return c.id !== Number(id);
     });
     guardarCategoria(categorias);
     mostrarCategorias();
