@@ -12,7 +12,7 @@ function crearTarea(titulo, descripcion, fecha, categoria, prioridad) {
         fecha: fecha,
         categoria: categoria,
         prioridad: prioridad,
-        realitzada: false
+        terminada: false
     };
 }
 
