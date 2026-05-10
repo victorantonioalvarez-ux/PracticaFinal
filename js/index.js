@@ -12,28 +12,35 @@ document.addEventListener("DOMContentLoaded", function(){
     formIndex.addEventListener("submit", function(event){
         event.preventDefault();
         
-        const inputArchivo = document.getElementById("archivojson");
-        const archivo = inputArchivo.files[0];
+          const nombreArchivo = document.getElementById("archivojson").value.trim();
 
-        if(!archivo) {
-            alert("Por favor selecciona un archivo JSON.")
+        if(nombreArchivo === "") {
+            alert("Escribe el nombre del archivo que quieres importar.");
             return;
         }
-        const lector = new FileReader();
-        lector.onload = function(e) {
-            try{
-                const tareasImportadas = JSON.parse(e.target.result);
+
+        const ruta = "./datos/" + (nombreArchivo.endsWith(".json") ? nombreArchivo : nombreArchivo + ".json");
+ 
+        fetch(ruta)
+            .then(function(respuesta) {
+                if (!respuesta.ok) {
+                    throw new Error("Archivo no encontrado.");
+                }
+                return respuesta.json();
+            })
+            .then(function(tareasImportadas) {
                 importarTareas(tareasImportadas);
                 mostrarTareas();
                 alert("Tareas importadas correctamente.");
                 formIndex.reset();
-            } catch (error) {
-                alert("El archivo no tiene un formato JSON válido.")
-            }
-        };
-        lector.readAsText(archivo);
-    })
+            })
+            .catch(function(error) {
+                alert("No se ha podido cargar el archivo. Comprueba que el nombre es correcto.");
+            });
+    });
+ 
 });
+
 
 function importarTareas(tareasNuevas) {
     const tareasExistentes = obtenerTareas();
