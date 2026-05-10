@@ -1,4 +1,7 @@
 const CLAVE_CATEGORIAS = "categorias";
+const CLAVE_TAREAS = "tareas";
+
+/* CATEGORIAS */
 
 function obtenerCategorias() {
     const datos = localStorage.getItem(CLAVE_CATEGORIAS);
@@ -26,3 +29,16 @@ function borrarCategoria(id) {
     guardarCategoria(categorias);
     mostrarCategorias();
 }
+
+
+/* TAREAS */ 
+
+function obtenerTareas() {
+    const datos = localStorage.getItem(CLAVE_TAREAS);
+    if (datos) {
+        return JSON.parse(datos);
+    } else {
+        return [];
+    }
+}
+
