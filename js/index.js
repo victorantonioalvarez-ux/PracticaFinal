@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     mostrarTareas();
 
-    const btnCrear = document.querySelector("#form_index button[type='button']");
+    const btnCrear = document.querySelector("#form-index button[type='button']");
     btnCrear.addEventListener("click", function(){
         window.location.href = "./creaciontareanueva.html"
     });
@@ -85,7 +85,7 @@ function mostrarTareas(){
         listaPendientes.innerHTML = "<p>No hay tareas pendientes.</p>";
     } else {
         pendientes.array.forEach(function(tareas) {
-            listaPendientes.appendChild(crearTarjetaTarea(tarea));
+            listaPendientes.appendChild(crearTarjetaTarea(tareas));
         });
     }
 
@@ -132,7 +132,7 @@ function toggleTerminada(id) {
     mostrarTareas();
 }
 
-function eliminarTareas(id) {
+function eliminarTareasYActualizar(id) {
     if (confirm("¿Seguro que quieres eliminar esta tarea?")){
         eliminarTareas(id)
         mostrarTareas();
