@@ -52,3 +52,9 @@ function eliminarTarea(id) {
     });
     guardarTareas(tareas);
 }
+
+function agregarTarea(tarea) {
+    const tareas = obtenerTareas();
+    tareas.push(tarea);
+    guardarTareas(tareas);
+}
