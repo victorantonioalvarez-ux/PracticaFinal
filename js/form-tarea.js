@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     cargarCategorias();
 
-    const formTareas = document-getElementById("form-tareas");
+    const formTareas = document.getElementById("form-tareas");
 
     formTareas.addEventListener("submit", function(evento){
         event.preventDefault();
@@ -48,7 +48,7 @@ function cargarCategorias(){
         return;
     }
 
-    catefgorias.forEach(function(c){
+    categorias.forEach(function(c){
         const opcion = document.createElement("option");
         opcion.value = c.nombre;
         opcion.textContent = c.nombre;
