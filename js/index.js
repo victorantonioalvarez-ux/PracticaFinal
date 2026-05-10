@@ -1,3 +1,40 @@
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    mostrarTareas();
+
+    const btnCrear = document.querySelector("#form_index button[type='button']");
+    btnCrear.addEventListener("click", function(){
+        window.location.href = "./creaciontareanueva.html"
+    });
+
+    const formIndex = document.getElementById("form-index")
+    formIndex.addEventListener("submit", function(event){
+        event.preventDefault();
+        
+        const inputArchivo = document.getElementById("archivojson");
+        const archivo = inputArchivo.files[0];
+
+        if(!archivo) {
+            alert("Por favor selecciona un archivo JSON.")
+            return;
+        }
+        const lector = new FileReader();
+        lector.onload = function(e) {
+            try{
+                const tareasImportadas = JSON.parse(e.target.result);
+                importarTareas(tareasImportadas);
+                mostrarTareas();
+                alert("Tareas importadas correctamente.");
+                formIndex.reset();
+            } catch (error) {
+                alert("El archivo no tiene un formato JSON válido.")
+            }
+        };
+        lector.readAsText(archivo);
+    })
+});
+
 function mostrarTareas(){
     const tareas = obtenerTareas();
 
