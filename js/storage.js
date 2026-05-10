@@ -42,3 +42,7 @@ function obtenerTareas() {
     }
 }
 
+function guardarTareas(tareas) {
+    localStorage.setItem(CLAVE_TAREAS, JSON.stringify(tareas));
+}
+
