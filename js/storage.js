@@ -65,6 +65,6 @@ function marcarTareaTerminada(id) {
             t.realizada = !t.realizada;
         }
         return t;
-        guardarTareas();
     });
+    guardarTareas();
 }
