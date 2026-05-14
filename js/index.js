@@ -104,6 +104,14 @@ function crearTarjetaTarea(tarea) {
 
     if(tarea.terminada){
         div.classList.add("tarea-terminada")
+    } else {
+        if(tarea.prioridad === "Alta") {
+            div.classList.add("prioridad-alta");
+        } else if(tarea.prioridad === "Media"){
+            div.classList.add("prioridad-media");
+        } else {
+            div.classList.add("prioridad-baja")
+        }
     }
 
     div.innerHTML =

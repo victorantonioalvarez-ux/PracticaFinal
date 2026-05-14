@@ -49,3 +49,15 @@ body{
 .formulario button{
 	padding: 8px;
 }
+
+.prioridad-alta {
+    border-left-color: #ef4444;
+}
+
+.prioridad-media {
+    border-left-color: #f59e0b;
+}
+
+.prioridad-baja {
+    border-left-color: #10b981;
+}
