@@ -50,6 +50,134 @@ body{
 	padding: 8px;
 }
 
+.titulo-menu {
+    color: white;
+    margin-top: 0;
+}
+
+.lista-tareas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.tarjeta-tarea {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    border-left: 4px solid #1e4ed8;
+}
+
+.tarea-terminada {
+    border-left-color: #10b981;
+    opacity: 0.75;
+}
+
+.tarea-terminada .tarea-titulo {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.tarea-info {
+    flex: 1;
+}
+
+.tarea-titulo {
+    margin: 0 0 6px 0;
+    color: #1e3a8a;
+    font-size: 16px;
+}
+
+.tarea-descripcion {
+    margin: 0 0 10px 0;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.tarea-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.tarea-acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* botones  */
+.btn-completar {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+.btn-eliminar {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s;
+    white-space: nowrap;
+}
+
+/* Categorias */
+
+.lista-categorias {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.tarjeta-categoria {
+    background: white;
+    border-radius: 8px;
+    padding: 12px 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cat-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cat-color {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cat-nombre {
+    font-size: 15px;
+    color: #374151;
+}
+
+/* Prioridades */
+
 .prioridad-alta {
     border-left-color: #ef4444;
 }

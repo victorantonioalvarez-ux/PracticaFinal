@@ -2,38 +2,47 @@
 document.addEventListener("DOMContentLoaded", function(){
 
     mostrarTareas();
+    mostrarGrafico();
+    
 
     const btnCrear = document.querySelector("#form-index button[type='button']");
     btnCrear.addEventListener("click", function(){
-        window.location.href = "./creaciontareanueva.html"
+        window.location.href = "./creaciontareanueva.html";
     });
 
     const formIndex = document.getElementById("form-index")
     formIndex.addEventListener("submit", function(event){
         event.preventDefault();
         
-        const inputArchivo = document.getElementById("archivojson");
-        const archivo = inputArchivo.files[0];
+          const nombreArchivo = document.getElementById("archivojson").value.trim();
 
-        if(!archivo) {
-            alert("Por favor selecciona un archivo JSON.")
+        if(nombreArchivo === "") {
+            alert("Escribe el nombre del archivo que quieres importar.");
             return;
         }
-        const lector = new FileReader();
-        lector.onload = function(e) {
-            try{
-                const tareasImportadas = JSON.parse(e.target.result);
+
+        const ruta = "./datos/" + (nombreArchivo.endsWith(".json") ? nombreArchivo : nombreArchivo + ".json");
+ 
+        fetch(ruta)
+            .then(function(respuesta) {
+                if (!respuesta.ok) {
+                    throw new Error("Archivo no encontrado.");
+                }
+                return respuesta.json();
+            })
+            .then(function(tareasImportadas) {
                 importarTareas(tareasImportadas);
                 mostrarTareas();
                 alert("Tareas importadas correctamente.");
                 formIndex.reset();
-            } catch (error) {
-                alert("El archivo no tiene un formato JSON válido.")
-            }
-        };
-        lector.readAsText(archivo);
-    })
+            })
+            .catch(function(error) {
+                alert("No se ha podido cargar el archivo. Comprueba que el nombre es correcto.");
+            });
+    });
+ 
 });
+
 
 function importarTareas(tareasNuevas) {
     const tareasExistentes = obtenerTareas();
@@ -45,8 +54,14 @@ function importarTareas(tareasNuevas) {
         if (!idsExistentes.includes(tarea.id)){
             let categoria = tarea.categoria;
             if(typeof categoria === "object" && categoria !== null) {
+                const categoriaExistente = obtenerCategorias().find(function(c) {
+                    return c.nombre === categoria.nom;
+                });
+                if (!categoriaExistente) {
+                    const nuevaCategoria = crearCategoria(categoria.nom, categoria.color);
+                    agregarCategoria(nuevaCategoria);
+                }
                 categoria = categoria.nom;
-
             }
 
             const tareaAdaptada = {
@@ -84,8 +99,8 @@ function mostrarTareas(){
     if (pendientes.length === 0) {
         listaPendientes.innerHTML = "<p>No hay tareas pendientes.</p>";
     } else {
-        pendientes.array.forEach(function(tareas) {
-            listaPendientes.appendChild(crearTarjetaTarea(tareas));
+        pendientes.forEach(function(tarea) {
+            listaPendientes.appendChild(crearTarjetaTarea(tarea));
         });
     }
 
@@ -138,12 +153,13 @@ function crearTarjetaTarea(tarea) {
 function toggleTerminada(id) {
     marcarTareaTerminada(id);
     mostrarTareas();
+    mostrarGrafico();
 }
 
-function eliminarTareasYActualizar(id) {
+function eliminarTareaYActualizar(id) {
     if (confirm("¿Seguro que quieres eliminar esta tarea?")){
-        eliminarTareas(id)
+        eliminarTarea(id);
         mostrarTareas();
+        mostrarGrafico();
     }
-    
 }

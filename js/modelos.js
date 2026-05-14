@@ -12,14 +12,14 @@ function crearTarea(titulo, descripcion, fecha, categoria, prioridad) {
         fecha: fecha,
         categoria: categoria,
         prioridad: prioridad,
-        realitzada: false
+        terminada: false
     };
 }
 
 
 function crearCategoria(nombre, color){
     return {
-        id: Date.now(),
+        id: Date.now() + Math.floor(Math.random() * 1000),
         nombre: nombre,
         color: color
     };

@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     const formTareas = document.getElementById("form-tareas");
 
-    formTareas.addEventListener("submit", function(evento){
+    formTareas.addEventListener("submit", function(event){
         event.preventDefault();
 
         const titulo = document.getElementById("titulo-tarea").value;
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
             return;
         }
         if (descripcion === "") {
-            alert("La descriopcion no puede estar vacío.")
+            alert("La descripcion no puede estar vacío.")
             return;
         }
         if (fecha === "") {
@@ -28,8 +28,12 @@ document.addEventListener("DOMContentLoaded", function(){
         }
 
         const nuevaTarea = crearTarea(titulo, descripcion, fecha, categoria, prioridad);
-        agregarCategoria(nuevaTarea);
+        agregarTarea(nuevaTarea);
+        
+        alert("Tarea creada correctamente.");
+        formTareas.reset()
         cargarCategorias();
+        
     });
 });
 
