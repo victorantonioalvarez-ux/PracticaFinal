@@ -122,7 +122,7 @@ function crearTarjetaTarea(tarea) {
     } else {
         if(tarea.prioridad === "Alta") {
             div.classList.add("prioridad-alta");
-        } else if(tarea.prioridad === "Media"){
+        } else if(tarea.prioridad === "Media" || tarea.prioridad === "Mitjana"){
             div.classList.add("prioridad-media");
         } else {
             div.classList.add("prioridad-baja")
