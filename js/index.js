@@ -2,6 +2,8 @@
 document.addEventListener("DOMContentLoaded", function(){
 
     mostrarTareas();
+    mostrarGrafico();
+    
 
     const btnCrear = document.querySelector("#form-index button[type='button']");
     btnCrear.addEventListener("click", function(){
@@ -143,11 +145,13 @@ function crearTarjetaTarea(tarea) {
 function toggleTerminada(id) {
     marcarTareaTerminada(id);
     mostrarTareas();
+    mostrarGrafico();
 }
 
 function eliminarTareaYActualizar(id) {
     if (confirm("¿Seguro que quieres eliminar esta tarea?")){
         eliminarTarea(id);
         mostrarTareas();
+        mostrarGrafico();
     }
 }
