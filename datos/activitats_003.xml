@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tareas SYSTEM "tareas.dtd">
+<tareas>
+    <tarea id="task-001">
+        <titulo>Crea l'estructura de carpetes del projecte</titulo>
+        <descripcion>Organitza els fitxers: HTML, CSS, JS, dades...</descripcion>
+        <fecha>2025-04-15</fecha>
+        <categoria>
+            <nombre>Organització</nombre> 
+            <color>#f7df1e</color>
+        </categoria>
+        <prioridad>Alta</prioridad>
+        <realizada>false</realizada>
+    </tarea>
+    <tarea id="task-002">
+        <titulo>Dissenya la interfície d'index.html</titulo>
+        <descripcion>Mostra la llista de tasques i afegeix el contenidor del gràfic.</descripcion>
+        <fecha>2025-04-16</fecha>
+        <categoria>
+            <nombre>Disseny</nombre> 
+            <color>#e5989b</color>
+        </categoria>
+        <prioridad>Mitjana</prioridad>
+        <realizada>false</realizada>
+    </tarea>
+    <tarea id="task-003">
+        <titulo>Implementa el formulari a crear-tasca.html</titulo>
+        <descripcion>Inclou validació dels camps i guardat a localStorage.</descripcion>
+        <fecha>2025-06-17</fecha>
+        <categoria>
+            <nombre>Disseny</nombre> 
+            <color>#e5989b</color>
+        </categoria>
+        <prioridad>Baixa</prioridad>
+        <realizada>false</realizada>
+    </tarea>
+    <tarea id="task-004">
+        <titulo>Permet marcar les tasques com a fetes</titulo>
+        <descripcion>Afegir checkbox a index.html i actualitzar l'estat.</descripcion>
+        <fecha>2025-05-18</fecha>
+        <categoria>
+            <nombre>Funcionalitat</nombre> 
+            <color>#00cec9</color>
+        </categoria>
+        <prioridad>Alta</prioridad>
+        <realizada>false</realizada>
+    </tarea>
+</tareas>
