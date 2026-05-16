@@ -135,7 +135,7 @@ function crearTarjetaTarea(tarea) {
             <p class="tarea-descripcion">${tarea.descripcion}</p>
             <div class="tarea-meta">
                 <span class="tarea-fecha"> ${tarea.fecha}</span>
-                <span class="tarea-categoria"> ${tarea.categoria}</span>
+                <span class="tarea-categoria" style="color:white; background-color: ${obtenerColorCategoria(tarea.categoria)}; padding: 2px 8px; border-radius: 5px;"> ${tarea.categoria}</span>
                 <span class="tarea-prioridad"> ${tarea.prioridad}</span>
             </div>
         </div>
@@ -148,6 +148,18 @@ function crearTarjetaTarea(tarea) {
             </button>
         </div>`;
     return div;
+}
+
+function obtenerColorCategoria(nombreCategoria) {
+    const categorias = obtenerCategorias();
+    const categoria = categorias.find(function(c) {
+        return c.nombre === nombreCategoria;
+    });
+    if (categoria) {
+        return categoria.color;
+    } else {
+        return "#e5e7eb";
+    }
 }
 
 function toggleTerminada(id) {
