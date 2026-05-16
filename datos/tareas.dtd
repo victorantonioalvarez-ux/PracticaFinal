@@ -1,0 +1,12 @@
+<!ELEMENT tareas (tarea+)>
+<!ATTLIST tarea
+    id CDATA #REQUIRED
+>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+
+<!ELEMENT categoria (nombre, color)>
+<!ATTLIST categoria
+    
