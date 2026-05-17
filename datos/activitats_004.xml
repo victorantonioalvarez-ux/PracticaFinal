@@ -9,9 +9,8 @@
             <color>#81ecec</color>
         </categoria>
         <prioridad>Mitjana</prioridad>
-        <realizada>false</realizada>
+        <terminada>false</terminada>
     </tarea>
-
         <tarea id="task-007">
         <titulo>Gestió de categories a categories.html</titulo>
         <descripcion>Permet afegir i eliminar categories.</descripcion>
@@ -21,7 +20,7 @@
             <color>#00cec9</color>
         </categoria>
         <prioridad>Mitjana</prioridad>
-        <realizada>false</realizada>
+        <terminada>false</terminada>
     </tarea>
     <tarea id="task-008">
         <titulo>Separa el projecte en mòduls JavaScript</titulo>
@@ -32,7 +31,7 @@
             <color>#55efc4</color>
         </categoria>
         <prioridad>Alta</prioridad>
-        <realizada>false</realizada>
+        <terminada>false</terminada>
     </tarea>
     <tarea id="task-009">
         <titulo>Aplica estils amb CSS</titulo>
@@ -43,7 +42,7 @@
             <color>#e5989b</color>
         </categoria>
         <prioridad>Baixa</prioridad>
-        <realizada>false</realizada>
+        <terminada>false</terminada>
     </tarea>
     <tarea id="task-010">
         <titulo>Revisa, prova i entrega el projecte</titulo>
@@ -54,7 +53,6 @@
             <color>#636e72</color>
         </categoria>
         <prioridad>Alta</prioridad>
-        <realizada>false</realizada>
+        <terminada>false</terminada>
     </tarea>
-
 </tareas>

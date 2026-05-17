@@ -10,7 +10,7 @@
             <color>#f7df1e</color>
         </categoria>
         <prioridad>Alta</prioridad>
-        <realizada>false</realizada>
+        <terminada>false</terminada>
     </tarea>
     <tarea id="task-002">
         <titulo>Dissenya la interfície d'index.html</titulo>
@@ -21,7 +21,7 @@
             <color>#e5989b</color>
         </categoria>
         <prioridad>Mitjana</prioridad>
-        <realizada>false</realizada>
+        <terminada>false</terminada>
     </tarea>
     <tarea id="task-003">
         <titulo>Implementa el formulari a crear-tasca.html</titulo>
@@ -32,7 +32,7 @@
             <color>#e5989b</color>
         </categoria>
         <prioridad>Baixa</prioridad>
-        <realizada>false</realizada>
+        <terminada>false</terminada>
     </tarea>
     <tarea id="task-004">
         <titulo>Permet marcar les tasques com a fetes</titulo>
@@ -43,6 +43,6 @@
             <color>#00cec9</color>
         </categoria>
         <prioridad>Alta</prioridad>
-        <realizada>false</realizada>
+        <terminada>false</terminada>
     </tarea>
 </tareas>

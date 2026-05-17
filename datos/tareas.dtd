@@ -1,5 +1,5 @@
 <!ELEMENT tareas (tarea+)>
-<!ELEMENT tarea (titulo, descripcion, fecha, categoria, prioridad, realizada)>
+<!ELEMENT tarea (titulo, descripcion, fecha, categoria, prioridad, terminada)>
 <!ATTLIST tarea id CDATA #REQUIRED>
 
 <!ELEMENT titulo (#PCDATA)>
@@ -11,4 +11,4 @@
 <!ELEMENT color (#PCDATA)>
 
 <!ELEMENT prioridad (#PCDATA)>
-<!ELEMENT realizada (#PCDATA)>
+<!ELEMENT terminada (#PCDATA)>
