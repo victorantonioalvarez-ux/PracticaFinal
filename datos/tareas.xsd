@@ -3,7 +3,7 @@
     <xs:element name="tareas">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="tareas" maxOccurs="unbounded">
+                <xs:element name="tarea" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="titulo" type="xs:string"/>
@@ -26,7 +26,7 @@
                                     </xs:restriction>
                                 </xs:simpleType>
                             </xs:element>
-                            <xs:element name="realizada" type="xs:boolean"/>
+                            <xs:element name="terminada" type="xs:boolean"/>
                         </xs:sequence>
                             <xs:attribute name="id" type="xs:string" use="required"/>
                     </xs:complexType>

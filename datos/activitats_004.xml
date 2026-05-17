@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tareas>
+<tareas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="tareas.xsd">
     <tarea id="task-006">
         <titulo>Afegir importació amb fetch</titulo>
         <descripcion>Carrega activitats externes sense duplicats.</descripcion>
