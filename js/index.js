@@ -21,18 +21,27 @@ document.addEventListener("DOMContentLoaded", function(){
             return;
         }
 
-        const ruta = "./datos/" + (nombreArchivo.endsWith(".json") ? nombreArchivo : nombreArchivo + ".json");
+        const ruta = "./datos/" + (nombreArchivo.endsWith(".json") || nombreArchivo.endsWith(".xml") ? nombreArchivo : nombreArchivo + ".json");
  
         fetch(ruta)
             .then(function(respuesta) {
                 if (!respuesta.ok) {
                     throw new Error("Archivo no encontrado.");
                 }
-                return respuesta.json();
+                return respuesta.text();
             })
-            .then(function(tareasImportadas) {
+            .then(function(contenido) {
+                let tareasImportadas;
+
+                if(ruta.endsWith(".xml")){
+                    tareasImportadas = importarXML(contenido);
+                }else{
+                    tareasImportadas = JSON.parse(contenido);
+                }
+
                 importarTareas(tareasImportadas);
                 mostrarTareas();
+                mostrarGrafico();
                 alert("Tareas importadas correctamente.");
                 formIndex.reset();
             })
@@ -43,6 +52,35 @@ document.addEventListener("DOMContentLoaded", function(){
  
 });
 
+function importarXML(xmlString) {
+    const parser = new DOMParser();
+    const tareaXml = parser.parseFromString(xmlString,"application/xml");
+    const tareas = tareaXml.getElementsByTagName("tarea");
+    const resultado = [];
+
+    for(let i = 0; i < tareas.length; i++) {
+        const tarea = tareas[i];
+
+        const categoria = {
+            nom: tarea.getElementsByTagName("nombre")[0].textContent,
+            color: tarea.getElementsByTagName("color")[0].textContent
+        };
+
+        resultado.push({
+            id: tarea.getAttribute("id"),
+            titol: tarea.getElementsByTagName("titulo")[0].textContent,
+            descripcio: tarea.getElementsByTagName("descripcion")[0].textContent,
+            data: tarea.getElementsByTagName("fecha")[0].textContent,
+            categoria: categoria,
+            prioritat: tarea.getElementsByTagName("prioridad")[0].textContent,
+            realitzada: tarea.getElementsByTagName("terminada")[0].textContent === "true"
+        });
+
+    }
+
+    return resultado;
+    
+}
 
 function importarTareas(tareasNuevas) {
     const tareasExistentes = obtenerTareas();
