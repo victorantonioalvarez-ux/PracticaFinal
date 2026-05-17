@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tareas>
+    <tarea id="task-006">
+        <titulo>Afegir importació amb fetch</titulo>
+        <descripcion>Carrega activitats externes sense duplicats.</descripcion>
+        <fecha>2025-04-22</fecha>
+        <categoria>
+            <nombre>Dades</nombre>
+            <color>#81ecec</color>
+        </categoria>
+        <prioridad>Mitjana</prioridad>
+        <realizada>false</realizada>
+    </tarea>
+
+        <tarea id="task-007">
+        <titulo>Gestió de categories a categories.html</titulo>
+        <descripcion>Permet afegir i eliminar categories.</descripcion>
+        <fecha>2025-04-24</fecha>
+        <categoria>
+            <nombre>Funcionalitat</nombre>
+            <color>#00cec9</color>
+        </categoria>
+        <prioridad>Mitjana</prioridad>
+        <realizada>false</realizada>
+    </tarea>
+    <tarea id="task-008">
+        <titulo>Separa el projecte en mòduls JavaScript</titulo>
+        <descripcion>Distribueix la lògica en fitxers com storage.js, models.js...</descripcion>
+        <fecha>2025-04-26</fecha>
+        <categoria>
+            <nombre>Codi net</nombre>
+            <color>#55efc4</color>
+        </categoria>
+        <prioridad>Alta</prioridad>
+        <realizada>false</realizada>
+    </tarea>
+    <tarea id="task-009">
+        <titulo>Aplica estils amb CSS</titulo>
+        <descripcion>Fes que la interfície sigui usable i atractiva.</descripcion>
+        <fecha>2025-04-28</fecha>
+        <categoria>
+            <nombre>Disseny</nombre>
+            <color>#e5989b</color>
+        </categoria>
+        <prioridad>Baixa</prioridad>
+        <realizada>false</realizada>
+    </tarea>
+    <tarea id="task-010">
+        <titulo>Revisa, prova i entrega el projecte</titulo>
+        <descripcion>Assegura't que tot funciona i que el codi està ordenat.</descripcion>
+        <fecha>2025-04-30</fecha>
+        <categoria>
+            <nombre>Finalització</nombre>
+            <color>#636e72</color>
+        </categoria>
+        <prioridad>Alta</prioridad>
+        <realizada>false</realizada>
+    </tarea>
+
+</tareas>
